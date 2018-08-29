@@ -1,6 +1,88 @@
 Gradle Test
 
 ```bash
+$ gradle init --type java-application
+Starting a Gradle Daemon (subsequent builds will be faster)
+
+BUILD SUCCESSFUL in 3s
+2 actionable tasks: 2 executed
+
+$ ll
+total 40
+drwxr-xr-x  9 sskim  staff   288 Aug 30 08:12 .
+drwxr-xr-x  4 sskim  staff   128 Aug 30 08:11 ..
+drwxr-xr-x  4 sskim  staff   128 Aug 30 08:12 .gradle
+-rw-r--r--  1 sskim  staff   993 Aug 30 08:12 build.gradle
+drwxr-xr-x  3 sskim  staff    96 Aug 30 08:12 gradle
+-rwxr-xr-x  1 sskim  staff  5296 Aug 30 08:12 gradlew
+-rw-r--r--  1 sskim  staff  2260 Aug 30 08:12 gradlew.bat
+-rw-r--r--  1 sskim  staff   359 Aug 30 08:12 settings.gradle
+drwxr-xr-x  4 sskim  staff   128 Aug 30 08:12 src
+
+$ gradle compileJava
+
+BUILD SUCCESSFUL in 8s
+1 actionable task: 1 executed
+
+$ ll
+total 40
+drwxr-xr-x  10 sskim  staff   320 Aug 30 08:14 .
+drwxr-xr-x   4 sskim  staff   128 Aug 30 08:11 ..
+drwxr-xr-x   5 sskim  staff   160 Aug 30 08:14 .gradle
+drwxr-xr-x   4 sskim  staff   128 Aug 30 08:14 build
+-rw-r--r--   1 sskim  staff   993 Aug 30 08:12 build.gradle
+drwxr-xr-x   3 sskim  staff    96 Aug 30 08:12 gradle
+-rwxr-xr-x   1 sskim  staff  5296 Aug 30 08:12 gradlew
+-rw-r--r--   1 sskim  staff  2260 Aug 30 08:12 gradlew.bat
+-rw-r--r--   1 sskim  staff   359 Aug 30 08:12 settings.gradle
+drwxr-xr-x   4 sskim  staff   128 Aug 30 08:12 src
+
+$ gradle run
+
+> Task :run
+Hello world.
+
+BUILD SUCCESSFUL in 0s
+2 actionable tasks: 1 executed, 1 up-to-date
+
+$ gradle jar
+
+BUILD SUCCESSFUL in 0s
+2 actionable tasks: 1 executed, 1 up-to-date
+      
+$ tree
+.
+|-- build
+|   |-- classes
+|   |   `-- java
+|   |       `-- main
+|   |           `-- App.class
+|   |-- libs
+|   |   `-- gradle_test.jar
+|   `-- tmp
+|       |-- compileJava
+|       `-- jar
+|           `-- MANIFEST.MF
+|-- build.gradle
+|-- gradle
+|   `-- wrapper
+|       |-- gradle-wrapper.jar
+|       `-- gradle-wrapper.properties
+|-- gradlew
+|-- gradlew.bat
+|-- settings.gradle
+`-- src
+    |-- main
+    |   `-- java
+    |       `-- App.java
+    `-- test
+        `-- java
+            `-- AppTest.java
+
+15 directories, 11 files
+```
+
+```bash
 $ git init
 Initialized empty Git repository in /Users/sskim/sskim.study/java/gradle_test/.git/
 $ echo "Gradle Test" > README.md       
